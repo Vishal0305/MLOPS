@@ -3,11 +3,6 @@ dataset = mnist.load_data('mymnist.db')
 train , test = dataset
 X_train , y_train = train
 X_test , y_test = test
-#img1 = X_train[7]
-#import cv2
-#import matplotlib.pyplot as plt
-#plt.imshow(img1 , cmap='gray')
-#img1_1d = img1.reshape(28*28)
 X_train = X_train.reshape(X_train.shape[0],28,28,1)
 X_test = X_test.reshape(X_test.shape[0],28,28,1)
 X_train = X_train.astype('float32')
